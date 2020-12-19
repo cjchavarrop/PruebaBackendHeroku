@@ -28,7 +28,7 @@ app.use('/api', apiRouter)
 app.use(cors());
 
 
-app.set('PORT',3000);  //Podemos setiar un puerto, que es inviarle valores. que despues con un get lo podemos consultar
+app.set('PORT', process.env.PORT || 3000);  //Podemos setiar un puerto, que es inviarle valores. que despues con un get lo podemos consultar
 
 app.listen(app.get('PORT'), ()=>{  //Todos los manejadores de ruta van en ese formato
     console.log('server up');
